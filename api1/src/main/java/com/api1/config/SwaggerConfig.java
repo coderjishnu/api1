@@ -17,14 +17,18 @@ public class SwaggerConfig {
 	@Bean
 	public ApiInfo apiInfo() {
 		ApiInfoBuilder apiBuilder = new ApiInfoBuilder();
-		apiBuilder.title("Api1").version("1.0").license("(c) Livin").description("List of All Endpoints used in Api1");
+		apiBuilder.title("Api1").version("1.0").license("(c) Product API")
+		.description("Endpoints used in Api1");
 		return apiBuilder.build();
 	}
 
 	@Bean
 	public Docket apiDocket() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.withClassAnnotation(Api.class)).paths(PathSelectors.any()).build()
-				.pathMapping("/").apiInfo(apiInfo()).useDefaultResponseMessages(false);
+				.apis(RequestHandlerSelectors
+				.withClassAnnotation(Api.class))
+				.paths(PathSelectors.any()).build()
+				.pathMapping("/").apiInfo(apiInfo())
+				.useDefaultResponseMessages(false);
 	}
 }
