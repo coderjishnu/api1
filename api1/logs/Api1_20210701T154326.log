@@ -1,0 +1,40 @@
+2021-07-01 15:43:29 [main] INFO  com.api1.Api1Application -
+				Starting Api1Application using Java 15.0.2 on DESKTOP-QNMA0KE with PID 10564 (C:\Users\JISHNU\git\api1\api1\target\classes started by JISHNU in C:\Users\JISHNU\git\api1\api1)
+2021-07-01 15:43:30 [main] INFO  com.api1.Api1Application -
+				No active profile set, falling back to default profiles: default
+2021-07-01 15:43:30 [background-preinit] INFO  o.h.validator.internal.util.Version -
+				HV000001: Hibernate Validator 6.2.0.Final
+2021-07-01 15:43:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8081 (http)
+2021-07-01 15:43:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-01 15:43:36 [main] INFO  o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2021-07-01 15:43:36 [main] INFO  o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-07-01 15:43:36 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2021-07-01 15:43:36 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 6667 ms
+2021-07-01 15:43:38 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping -
+				Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-07-01 15:43:40 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8081"]
+2021-07-01 15:43:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8081 (http) with context path ''
+2021-07-01 15:43:40 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -
+				Context refreshed
+2021-07-01 15:43:40 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -
+				Found 1 custom documentation plugin(s)
+2021-07-01 15:43:40 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner -
+				Scanning for api listing references
+2021-07-01 15:43:41 [main] INFO  com.api1.Api1Application -
+				Started Api1Application in 13.681 seconds (JVM running for 17.06)
+2021-07-01 16:32:30 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-01 16:32:30 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2021-07-01 16:32:33 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 2501 ms
+2021-07-01 16:34:47 [RMI TCP Connection(57)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin -
+				Application shutdown requested.
