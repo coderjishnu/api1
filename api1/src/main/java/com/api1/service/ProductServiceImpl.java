@@ -22,16 +22,16 @@ public class ProductServiceImpl implements ProductService {
 	private final Logger log = LoggerFactory.getLogger(ProductServiceImpl.class);
 
 	@Value("${get_product_by_id.url}")
-	private String GET_PRODUCT_BY_ID_URI;
+	private String get_product_by_id_uri;
 
 	@Value("${post_add_product.url}")
-	private String POST_ADD_PRODUCT_URI;
+	private String post_add_product_uri;
 
 	@Value("${post_update_product.url}")
-	private String POST_UPDATE_PRODUCT_URI;
+	private String post_update_product_uri;
 
 	@Value("${get_delete_product.url}")
-	private String GET_DELETE_PRODUCT_URI;
+	private String get_delete_product_uri;
 
 	@Autowired
 	WebClient.Builder webClientBuilder;
@@ -39,7 +39,7 @@ public class ProductServiceImpl implements ProductService {
 	public Response getProductById(String productId) throws ProductNotFoundException {
 		log.info("Called getProductById service");
 
-		ResponseHandler response = webClientBuilder.build().get().uri(GET_PRODUCT_BY_ID_URI, productId).retrieve()
+		ResponseHandler response = webClientBuilder.build().get().uri(get_product_by_id_uri, productId).retrieve()
 				.bodyToMono(ResponseHandler.class).block();
 		if (response.getResponseType().equals("FAILED")) {
 			log.info("Throwed Product Not Found Exception");
@@ -54,7 +54,7 @@ public class ProductServiceImpl implements ProductService {
 	public Product addProduct(Product product) throws ProductAlreadyPresentException {
 
 		log.info("Called addProduct Service");
-		ResponseHandler response = webClientBuilder.build().post().uri(POST_ADD_PRODUCT_URI).bodyValue(product)
+		ResponseHandler response = webClientBuilder.build().post().uri(post_add_product_uri).bodyValue(product)
 				.retrieve().bodyToMono(ResponseHandler.class).block();
 		if (response.getResponseType().equals("FAILED")) {
 			log.info("Throwed Product Already Present Exception");
@@ -67,7 +67,7 @@ public class ProductServiceImpl implements ProductService {
 
 	public Product updateProduct(Product product) throws ProductNotFoundException {
 		log.info("Called updateProductService");
-		ResponseHandler response = webClientBuilder.build().post().uri(POST_UPDATE_PRODUCT_URI).bodyValue(product)
+		ResponseHandler response = webClientBuilder.build().post().uri(post_update_product_uri).bodyValue(product)
 				.retrieve().bodyToMono(ResponseHandler.class).block();
 		if (response.getResponseType().equals("FAILED")) {
 			log.info("Throwed Product Not Found Exception");
@@ -79,8 +79,8 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	public String deleteProduct(String productId) throws ProductNotDeletedException {
-		log.info("Called deleteProduct service");
-		ResponseHandler response = webClientBuilder.build().get().uri(GET_DELETE_PRODUCT_URI, productId).retrieve()
+		log.info("Called delete product service");
+		ResponseHandler response = webClientBuilder.build().get().uri(get_delete_product_uri, productId).retrieve()
 				.bodyToMono(ResponseHandler.class).block();
 		if (response.getResponseType().equals("FAILED")) {
 			log.info("Throwed Product Not Deleted Exception");
