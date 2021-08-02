@@ -1,53 +1,25 @@
 server:
   port: 8081
   
+spring:
+  application:
+    name: api-1
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+  
 get_product_by_id:
-  url: http://localhost:8080/api2/search/{productId}
+  url: http://api-2/api2/search/{productId}
 
 post_add_product:
-  url: http://localhost:8080/api2/add
+  url: http://api-2/api2/add
   
 post_update_product:
-  url: http://localhost:8080/api2/update
+  url: http://api-2/api2/update
   
 get_delete_product:
-  url: http://localhost:8080/api2/delete/{productId}
-  
-
-  
-name: Build
-on:
-  push:
-    branches:
-      - master # or the name of your main branch
-
-jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: Set up JDK 11
-        uses: actions/setup-java@v1
-        with:
-          java-version: 11
-      - name: Cache SonarQube packages
-        uses: actions/cache@v1
-        with:
-          path: ~/.sonar/cache
-          key: ${{ runner.os }}-sonar
-          restore-keys: ${{ runner.os }}-sonar
-      - name: Cache Maven packages
-        uses: actions/cache@v1
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
-      - name: Build and analyze
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+  url: http://api-2/api2/delete/{productId}
+ 
