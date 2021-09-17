@@ -2,14 +2,15 @@ package com.api1.model;
 
 /**
  * 
- * ResponseHandle Class handles the response
+ * ResponseHandler Class. Handles the response from an end point. Contains
+ * responseType, responseMessage and productClone as variables.
  *
  */
-public class ResponseHandler {
+public class Api2Response {
 
 	String responseType;
 	String responseMessage;
-	Product productResponse;
+	ProductClone productClone;
 
 	public String getResponseType() {
 		return responseType;
@@ -27,18 +28,17 @@ public class ResponseHandler {
 		this.responseMessage = responseMessage;
 	}
 
-	public Product getProductResponse() {
-		return productResponse;
+	public ProductClone getProductClone() {
+		return productClone;
 	}
 
-	public void setProductResponse(Product productResponse) {
-		this.productResponse = productResponse;
+	public void setProductClone(ProductClone productClone) {
+		this.productClone = productClone;
 	}
 
 	@Override
 	public String toString() {
 		return "ResponseHandler [responseType=" + responseType + ", responseMessage=" + responseMessage
-				+ ", productResponse=" + productResponse + "]";
+				+ ", productClone=" + productClone + "]";
 	}
-
 }

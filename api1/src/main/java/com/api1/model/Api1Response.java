@@ -2,10 +2,10 @@ package com.api1.model;
 
 /**
  * 
- * View Class to get product as well as status
+ * Response Class. Contains product and status as variables.
  *
  */
-public class Response {
+public class Api1Response {
 
 	Product product;
 	String status;
