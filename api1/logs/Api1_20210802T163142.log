@@ -1,0 +1,114 @@
+2021-08-02 16:31:44 [background-preinit] INFO  o.h.validator.internal.util.Version -
+				HV000001: Hibernate Validator 6.2.0.Final
+2021-08-02 16:31:44 [main] INFO  com.api1.Api1Application -
+				Starting Api1Application using Java 15.0.2 on DESKTOP-QNMA0KE with PID 420 (C:\Users\JISHNU\git\api1\api1\target\classes started by JISHNU in C:\Users\JISHNU\git\api1\api1)
+2021-08-02 16:31:44 [main] INFO  com.api1.Api1Application -
+				No active profile set, falling back to default profiles: default
+2021-08-02 16:31:46 [main] INFO  o.s.cloud.context.scope.GenericScope -
+				BeanFactory id=c23f16ff-464a-3f86-9ad2-ce28cfd269b7
+2021-08-02 16:31:46 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-02 16:31:46 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-02 16:31:46 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-02 16:31:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8081 (http)
+2021-08-02 16:31:47 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8081"]
+2021-08-02 16:31:47 [main] INFO  o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2021-08-02 16:31:47 [main] INFO  o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-08-02 16:31:47 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2021-08-02 16:31:47 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 3700 ms
+2021-08-02 16:31:49 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping -
+				Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-02 16:31:51 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration -
+				Eureka HTTP Client uses RestTemplate.
+2021-08-02 16:31:51 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger -
+				Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-08-02 16:31:51 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory -
+				Setting initial instance status as: STARTING
+2021-08-02 16:31:51 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Initializing Eureka in region us-east-1
+2021-08-02 16:31:51 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2021-08-02 16:31:51 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Disable delta property : false
+2021-08-02 16:31:51 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Single vip registry refresh property : null
+2021-08-02 16:31:51 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Force full registry fetch : false
+2021-08-02 16:31:51 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Application is null : false
+2021-08-02 16:31:51 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Registered Applications size is zero : true
+2021-08-02 16:31:51 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Application version is -1: true
+2021-08-02 16:31:51 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Getting all instance registry info from the eureka server
+2021-08-02 16:31:52 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				The response status is 200
+2021-08-02 16:31:52 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Starting heartbeat executor: renew interval is: 30
+2021-08-02 16:31:52 [main] INFO  c.n.discovery.InstanceInfoReplicator -
+				InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-08-02 16:31:52 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Discovery Client initialized at timestamp 1627902112767 with initial instances count: 1
+2021-08-02 16:31:52 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry -
+				Registering application API-1 with eureka with status UP
+2021-08-02 16:31:52 [main] INFO  c.netflix.discovery.DiscoveryClient -
+				Saw local status change event StatusChangeEvent [timestamp=1627902112772, current=UP, previous=STARTING]
+2021-08-02 16:31:52 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_API-1/api-1:589961364: registering service...
+2021-08-02 16:31:52 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8081"]
+2021-08-02 16:31:52 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8081 (http) with context path ''
+2021-08-02 16:31:52 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration -
+				Updating port to 8081
+2021-08-02 16:31:52 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_API-1/api-1:589961364 - registration status: 204
+2021-08-02 16:31:53 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -
+				Context refreshed
+2021-08-02 16:31:53 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -
+				Found 1 custom documentation plugin(s)
+2021-08-02 16:31:53 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner -
+				Scanning for api listing references
+2021-08-02 16:31:53 [main] INFO  com.api1.Api1Application -
+				Started Api1Application in 10.834 seconds (JVM running for 12.833)
+2021-08-02 16:33:01 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-02 16:33:01 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2021-08-02 16:33:01 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 3 ms
+2021-08-02 16:34:34 [http-nio-8081-exec-10] INFO  com.api1.service.ProductServiceImpl -
+				Called getProductById service
+2021-08-02 16:34:42 [http-nio-8081-exec-10] INFO  com.api1.service.ProductServiceImpl -
+				Throwed Product Not Found Exception
+2021-08-02 16:36:27 [http-nio-8081-exec-3] INFO  com.api1.service.ProductServiceImpl -
+				Called getProductById service
+2021-08-02 16:36:27 [http-nio-8081-exec-3] INFO  com.api1.service.ProductServiceImpl -
+				Product was found
+2021-08-02 16:36:27 [http-nio-8081-exec-3] INFO  com.api1.service.ProductServiceImpl -
+				Exited getProductById service
+2021-08-02 16:36:51 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -
+				Resolving eureka endpoints via configuration
+2021-08-02 16:41:36 [RMI TCP Connection(13)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin -
+				Application shutdown requested.
+2021-08-02 16:41:36 [RMI TCP Connection(13)-127.0.0.1] INFO  o.s.c.n.e.s.EurekaServiceRegistry -
+				Unregistering application API-1 with eureka with status DOWN
+2021-08-02 16:41:36 [RMI TCP Connection(13)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient -
+				Saw local status change event StatusChangeEvent [timestamp=1627902696679, current=DOWN, previous=UP]
+2021-08-02 16:41:36 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_API-1/api-1:589961364: registering service...
+2021-08-02 16:41:36 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -
+				DiscoveryClient_API-1/api-1:589961364 - registration status: 204
+2021-08-02 16:41:38 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin -
+				Application shutdown requested.
+2021-08-02 16:41:39 [RMI TCP Connection(13)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient -
+				Shutting down DiscoveryClient ...

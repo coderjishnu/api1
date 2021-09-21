@@ -4,41 +4,42 @@ import com.api1.exception.ProductAlreadyPresentException;
 import com.api1.exception.ProductNotDeletedException;
 import com.api1.exception.ProductNotFoundException;
 import com.api1.model.Product;
-import com.api1.model.Response;
+import com.api1.model.Api1Response;
 
 public interface ProductService {
 	/**
-	 * Method to get Product by Id
+	 * Returns a response containing the product and the status.
 	 * 
-	 * @param productId input the productId
-	 * @return view returns a view of product with status
+	 * @param productId
+	 * @return response
 	 * @throws ProductNotFoundException
 	 */
-	public Response getProductById(String productId) throws ProductNotFoundException;
+	public Api1Response getProductById(String productId) throws ProductNotFoundException;
 
 	/**
-	 * Method to Add Product
+	 * Saves the product and returns the response containing product and the status.
 	 * 
-	 * @param product input the product
-	 * @return product returns the stored product
+	 * @param product
+	 * @return response
 	 * @throws ProductAlreadyPresentException
 	 */
-	public Product addProduct(Product product) throws ProductAlreadyPresentException;
+	public Api1Response addProduct(Product product) throws ProductAlreadyPresentException;
 
 	/**
-	 * Method to update Product
+	 * Updates the product and returns the response containing product and the
+	 * status.
 	 * 
-	 * @param product input the product
-	 * @return product returns the updated product
+	 * @param product
+	 * @return response
 	 * @throws ProductNotFoundException
 	 */
-	public Product updateProduct(Product product) throws ProductNotFoundException;
+	public Api1Response updateProduct(Product product) throws ProductNotFoundException;
 
 	/**
-	 * Method to delete the product by Id
+	 * Deletes the product and returns the message.
 	 * 
-	 * @param productId input the product Id
-	 * @return string returns the status whether the product is deleted
+	 * @param productId
+	 * @return string
 	 * @throws ProductNotDeletedException
 	 */
 	public String deleteProduct(String productId) throws ProductNotDeletedException;
